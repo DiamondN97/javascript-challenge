@@ -5,15 +5,16 @@ var tableData = data;
 
 var table = d3.select('table');
 var body = d3.select('body');
+var tbody=d3.select('tbody')
 
-var row = body.append('tr');
-var cell = body.append('td');
-var city = body.append('td');
-var state = body.append('td');
-var country = body.append('td');
-var shape = body.append('td');
-var duration = body.append('td');
-var comments = body.append('td');
+var row = tbody.append('tr');
+var cell = tbody.append('td');
+var city = tbody.append('td');
+var state = tbody.append('td');
+var country = tbody.append('td');
+var shape = tbody.append('td');
+var duration = tbody.append('td');
+var comments = tbody.append('td');
 
 
 
@@ -34,7 +35,7 @@ function runEnter(){
         shape.text(tableData[i].shape);
         duration.text(tableData[i].durationMinutes);
         comments.text(tableData[i].comments);
-    
+        tbody.html()
     };
     
 
