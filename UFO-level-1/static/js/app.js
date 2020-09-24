@@ -1,15 +1,11 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
 
 var table = d3.select('table');
 var body = d3.select('body');
 var tbody=d3.select('tbody')
 
-
-
-tableInfo(tableData);
 
 var form = d3.select('form');
 form.on('submit', runEnter);
