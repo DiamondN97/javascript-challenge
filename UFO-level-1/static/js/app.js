@@ -4,7 +4,7 @@ var tableData = data;
 
 var table = d3.select('table');
 var body = d3.select('body');
-var tbody=d3.select('tbody')
+var tbody=d3.select('tbody');
 
 
 var form = d3.select('form');
@@ -17,10 +17,14 @@ function runEnter(){
     var inputElement = d3.select('input');
     var inputValue = inputElement.property('value');
     var filtered = tableData.filter(tableData => tableData.datetime === inputValue);
+
     // console.log(filtered);
     tbody.html('');
     tableInfo(filtered);
 };
+
+
+
 
 function tableInfo(sightingInfo){
     for(let i = 0; i < sightingInfo.length; i++){
@@ -41,4 +45,6 @@ function tableInfo(sightingInfo){
         comments.text(sightingInfo[i].comments);
     };
 };
+
+// btn.addEventListener("click", runEnter);
 
